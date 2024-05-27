@@ -1,0 +1,10 @@
+kafka-pipeline:
+  source:
+    kafka:
+      bootstrap_servers:
+        - redpanda:9092
+      topics:
+        - name: Topic1
+          group_id: groupID
+  sink:
+    - stdout:

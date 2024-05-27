@@ -1,0 +1,23 @@
+{
+    "schema": {
+        "type":"struct",
+        "fields":[{
+            "type":"string",
+            "optional": false,
+            "field": "user_id"
+            },{
+            "type":"string",
+            "optional": false,
+            "field": "name"
+            },{
+            "type":"int32",
+            "optional": true,
+            "field": "age"
+            }]
+    },
+    "payload":{
+      "user_id": "user/946",
+      "name": "erik jensen",
+      "age": 25
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "opensearch-students-sink",
+  "config": {
+    "connector.class": "io.aiven.kafka.connect.opensearch.OpensearchSinkConnector",
+    "connection.url": "http://opensearch:9200",
+    "topics": "students1",
+    "tasks.max":"1",
+    "key.ignore": "true",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "schema.ignore": "true",
+    "transforms": "TimestampRouter",
+    "transforms.TimestampRouter.topic.format": "${topic}-${timestamp}",
+    "transforms.TimestampRouter.timestamp.format": "yyyy-MM-dd",
+    "transforms.TimestampRouter.type": "org.apache.kafka.connect.transforms.TimestampRouter"
+  }
+}
