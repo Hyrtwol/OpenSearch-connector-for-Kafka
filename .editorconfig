@@ -1,0 +1,23 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{cs,razor,html,js,css}]
+indent_size = 4
+
+[*.cs]
+dotnet_sort_system_directives_first = true
+
+[*.{md,txt,http}]
+max_line_length = off
+
+[*.{xml,csproj,props,targets,shproj,projitems,config}]
+insert_final_newline = false
+
+[*.json]
+insert_final_newline = false

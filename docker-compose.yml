@@ -48,13 +48,6 @@ services:
       CONNECT_PLUGIN_PATH: "/opt/kafka/connect-plugins"
     volumes:
       - ./connect-plugins:/opt/kafka/connect-plugins
-  neo4j:
-    image: neo4j:latest
-    environment:
-      NEO4J_AUTH: neo4j/bennyB0M!123
-    ports:
-      - '7474:7474'
-      - '7687:7687'
   kafka-ui:
     container_name: kafka-ui
     image: provectuslabs/kafka-ui:latest
@@ -71,3 +64,10 @@ services:
       DYNAMIC_CONFIG_ENABLED: 'true'
     volumes:
       - /tmp/config.yml:/tmp/kafkaui/dynamic_config.yaml
+  neo4j:
+    image: neo4j:latest
+    environment:
+      NEO4J_AUTH: neo4j/bennyB0M!123
+    ports:
+      - '7474:7474'
+      - '7687:7687'

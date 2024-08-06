@@ -1,0 +1,4 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@base_url=http://localhost:8083
+
+GET {{base_url}}/connectors/
