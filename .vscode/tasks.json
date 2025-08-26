@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "podman start opensearch-kafka",
+            "command": "call",
+            "type": "shell",
+            "args": [
+                "podman_start.bat"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}${pathSeparator}"
+            }
+        },
+        {
+            "label": "podman stop opensearch-kafka",
+            "command": "call",
+            "type": "shell",
+            "args": [
+                "podman_stop.bat"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}${pathSeparator}"
+            }
+        }
+    ]
+}
