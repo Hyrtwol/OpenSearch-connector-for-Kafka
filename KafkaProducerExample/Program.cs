@@ -9,6 +9,7 @@ public static class Program
 {
     const string brokerList = "127.0.0.1:19092";
     const string topicName = "students1";
+    //const string topicName = "test_topic";
 
     public static async Task Main(string[] args)
     {
