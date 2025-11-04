@@ -21,9 +21,9 @@ public static class KafkaUtils
         return producerBuilder;
     }
 
-    public static Person[]? GetTestData(string path)
+    public static Person[] GetTestData(string path)
     {
         using var stream = File.OpenRead(path);
-        return JsonSerializer.Deserialize<Person[]>(stream);
+        return JsonSerializer.Deserialize<Person[]>(stream) ?? throw new NullReferenceException("Deserialize");
     }
 }

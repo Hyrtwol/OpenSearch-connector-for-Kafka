@@ -12,7 +12,7 @@ public static class Program
 
     public static async Task Main(string[] args)
     {
-        Person[] persons = GetTestData("data.json") ?? throw new NullReferenceException("Deserialize");
+        Person[] persons = GetTestData("data.json");
 
         using var producer = GetProducerBuilder(brokerList).Build();
         try
